@@ -1,14 +1,14 @@
 import java.io.BufferedInputStream;
-import java.io.InputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class Run {
     static InputStream input;
 
-    public static void main(String[] args) throws IOException {
+    public static void runByte(String fileName) throws IOException {
        
-        input = new BufferedInputStream(new FileInputStream(args[0]));
+        input = new BufferedInputStream(new FileInputStream(fileName));
 
         byte[] file = input.readAllBytes();
 
@@ -22,7 +22,7 @@ public class Run {
                             int length = file[i] & 0xFF;
                             i++;
                             for (int j = 0; j < length; j++) {
-                                System.out.print((char) (file[i + j] & 0xFF));
+                                IO.print((char) (file[i + j] & 0xFF));
                             }
                             i += length - 1;
                         }

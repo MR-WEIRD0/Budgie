@@ -1,10 +1,10 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Compiler {
 
     public void compile(List<Token> tokens, String name) throws IOException {
-        try (OutputStream output = new BufferedOutputStream(new FileOutputStream(name + ".bdgbin"))) {
+        try (OutputStream output = new BufferedOutputStream(new FileOutputStream(name + ".bb"))) {
             for (Token token : tokens) {
                 switch (token.type) {
                     case Token.Type.PRINT -> {
@@ -24,7 +24,7 @@ public class Compiler {
                         }
                     }
                     default -> {
-                        System.out.println("Undefined opcode");
+                        IO.print("Undefined opcode");
                     }
                 }
             }

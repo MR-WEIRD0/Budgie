@@ -93,10 +93,9 @@ public class Tokenizer {
                 }
                 case ';' -> {
                     tokens.add(new Token(Token.Type.SEMICOLON, ";"));
-                    return tokens;
                 }
                 default -> {
-                    throw new RuntimeException("Unexpected character " + current + " was found at position" + pos);
+                    new Error("Unexpected character " + current + " was found at position" + pos);
                 }
             }
 
@@ -135,13 +134,13 @@ public class Tokenizer {
                     }
                 }
                 if (num == escapeableChars.length) {
-                    throw new RuntimeException("Unescapable character attempted to be escaped: " + input.charAt(pos + 1));
+                    new Error("Unescapable character attempted to be escaped: " + input.charAt(pos + 1));
                 }
                 pos++;
                 pos++;
             }
             if (pos >= input.length()) {
-                throw new RuntimeException("Unterminated string");
+                new Error("Unterminated string");
             }
         }
 
