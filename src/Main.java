@@ -55,12 +55,10 @@ public class Main {
                 }
 
                 Path path = Path.of(arg2);
-       
-                String file = Files.readString(path);
 
                 Run run = new Run();
 
-                run.runByte(file);
+                run.runByte(path.toString());
 
             }
 
