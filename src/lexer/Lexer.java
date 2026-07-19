@@ -41,6 +41,9 @@ public class Lexer {
                     case "int" -> {
                         tokens.add(new Token(Token.Type.VAR, word));
                     }
+                    case "System" -> {
+                        tokens.add(new Token(Token.Type.SYSTEM, word));
+                    }
                     default -> {
                         tokens.add(new Token(Token.Type.IDENTIFIER, word));
                     }

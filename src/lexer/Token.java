@@ -9,7 +9,8 @@ public class Token {
         PRINT, NUMBER, STRING, CLASS,
         IDENTIFIER, VAR, EQUALS,
         LPAREN, RPAREN, PLUS, MINUS,
-        DIV, MUL, PRINTLN, DOT, SEMICOLON
+        DIV, MUL, PRINTLN, DOT, SEMICOLON,
+        SYSTEM
     }
     
     public Token(Type type, String value) {
