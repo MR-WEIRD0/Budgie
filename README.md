@@ -6,7 +6,9 @@ Budgie is not in any way finished, and all of the logic will probably be reworke
 # Commands
 
 There is a very short list of commands:
+
 System.print
+
 System.println
 
 # Syntax
