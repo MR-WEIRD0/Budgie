@@ -1,4 +1,7 @@
+package vm;
+
 //currently unused, taken from other project
+
 
 public class VMStack {
 
